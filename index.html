@@ -1,82 +1,53 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Инженерный дашборд — вариант 7</title>
-<style>
-:root{--bg:#f1f5f9;--card:#fff;--text:#172033;--muted:#65748b;--accent:#1769aa;--line:#dbe3ee;--good:#087f5b}
-[data-theme="dark"]{--bg:#101827;--card:#1b2638;--text:#edf3fb;--muted:#aab8cb;--accent:#69b7ff;--line:#344258;--good:#56d6a5}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 Arial,sans-serif}
-header{padding:24px max(18px,calc((100% - 1120px)/2));background:linear-gradient(120deg,#123b63,#1769aa);color:#fff}
-header h1{margin:0 0 6px;font-size:clamp(22px,4vw,32px)}header p{margin:0;color:#e0efff}
-main{max-width:1120px;margin:22px auto;padding:0 16px}.toolbar,.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
-button{border:0;border-radius:10px;padding:11px 15px;background:var(--accent);color:white;font-weight:700;cursor:pointer}
-button.secondary{background:var(--card);color:var(--text);border:1px solid var(--line)}button:hover{filter:brightness(1.08)}
-.tab.active{background:#0b4c7d}.panel{display:none}.panel.active{display:block}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 5px 18px #12233a0b}
-h2{margin:0 0 12px}h3{margin:18px 0 8px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
-label{display:block;font-size:14px;color:var(--muted);margin-bottom:5px}input{width:100%;padding:11px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--text);font-size:16px}
-.result{background:var(--bg);border-radius:12px;padding:13px;margin:8px 0}.result b{display:block;font-size:23px;color:var(--good)}
-.note{font-size:13px;color:var(--muted)}table{width:100%;border-collapse:collapse}th,td{border:1px solid var(--line);padding:9px;text-align:left}th{background:var(--bg)}.warning{padding:12px;border-left:4px solid #d98a00;background:var(--bg);border-radius:8px}
-@media(max-width:600px){main{padding:0 10px}.card{padding:14px}table{font-size:13px}}
-@media print{body{background:#fff!important;color:#000!important}header{background:#fff!important;color:#000!important;padding:8px}header p{color:#000}.toolbar,.tabs,button{display:none!important}.panel{display:none!important}#report{display:block!important}.card{box-shadow:none;border:1px solid #777;break-inside:avoid}th,td{border:1px solid #555}input{border:0;background:#fff;color:#000;padding:0}}
-</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.7">
+  <style type="text/css">
+    body {background-color: #eaeff5}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #d1e6ff; -webkit-text-stroke: #d1e6ff}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #0f121c; -webkit-text-stroke: #0f121c; background-color: #ffffff}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #0d2a57}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #134087}
+    p.p7 {margin: 0.0px 0.0px 16.0px 0.0px; font: 16.0px Arial; color: #0f121c; -webkit-text-stroke: #0f121c}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #414d65; -webkit-text-stroke: #414d65}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #0f121c; -webkit-text-stroke: #0f121c}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Arial; color: #135d39; -webkit-text-stroke: #135d39}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #121721; -webkit-text-stroke: #121721}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #414d65; -webkit-text-stroke: #414d65; background-color: #ffffff}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 11.0px Menlo; font-kerning: none}
+    span.s3 {font-kerning: none; background-color: #ffffff}
+    span.s4 {font-kerning: none; background-color: #eaeff5}
+    span.s5 {font: 11.0px 'Helvetica Neue'; font-kerning: none; color: #ffffff; background-color: #134087; -webkit-text-stroke: 0px #ffffff}
+  </style>
 </head>
 <body>
-<header><h1>Инженерный дашборд дорожного строительства</h1><p>Практическое занятие №19 · Вариант 7 · Потребность в щебне → Логистика рейса → Расход топлива</p></header>
-<main>
-<div class="toolbar"><button class="secondary" onclick="toggleTheme()">☾ Светлая / тёмная тема</button><button class="secondary" onclick="saveProject()">Сохранить проект</button><button class="secondary" onclick="loadProject()">Загрузить сохранённое</button></div>
-<nav class="tabs">
-<button class="tab active" onclick="switchTab('m1',this)">Модуль 1: Щебень</button>
-<button class="tab" onclick="switchTab('m2',this)">Модуль 2: Логистика рейса</button>
-<button class="tab" onclick="switchTab('m3',this)">Модуль 3: Расход топлива</button>
-<button class="tab" onclick="switchTab('report',this)">Сводный отчёт</button>
-</nav>
-<section id="m1" class="panel active">
-<div class="card"><h2>Модуль 1. Потребность в щебне</h2><p>Формулы: V = L × B × h × K; M = V × ρ. Коэффициент K по справочнику: 1,25. Плотность щебня задаётся пользователем, поскольку в таблице задания её значение не указано.</p>
-<div class="grid">
-<div><label>Длина L, м</label><input id="L" type="number" min="0" step="any" value="100"></div>
-<div><label>Ширина B, м</label><input id="B" type="number" min="0" step="any" value="4"></div>
-<div><label>Толщина h, м</label><input id="h" type="number" min="0" step="any" value="0.2"></div>
-<div><label>Коэффициент K</label><input id="K" type="number" min="0" step="any" value="1.25"></div>
-<div><label>Плотность ρ, т/м³</label><input id="rho" type="number" min="0" step="any" value="1.8"></div>
-</div><div class="grid"><div class="result">Объём щебня V<b id="vol">100.00 м³</b></div><div class="result">Масса щебня M<b id="mass">180.00 т</b></div></div>
-<button onclick="transferM1toM2()">Передать объём в Модуль 2</button><button onclick="transferM1toM3()">Передать массу в Модуль 3</button></div></section>
-<section id="m2" class="panel"><div class="card"><h2>Модуль 2. Логистика рейса</h2><p>Формула: T = 2L/V × 60 + tп + tр. Объём из Модуля 1 передаётся в поле «Объём груза»; скорость, расстояние и времена погрузки/разгрузки вводятся отдельно.</p>
-<div class="grid">
-<div><label>Объём груза, м³ (из Модуля 1)</label><input id="cargoVol" type="number" min="0" step="any" value="100"></div>
-<div><label>Расстояние в одну сторону L, км</label><input id="distance" type="number" min="0" step="any" value="25"></div>
-<div><label>Средняя скорость V, км/ч</label><input id="speed" type="number" min="0.01" step="any" value="40"></div>
-<div><label>Погрузка tп, мин</label><input id="loadTime" type="number" min="0" step="any" value="15"></div>
-<div><label>Разгрузка tр, мин</label><input id="unloadTime" type="number" min="0" step="any" value="10"></div>
-</div><div class="result">Время полного рейса T<b id="tripTime">100.00 мин</b></div><button onclick="calculateM2()">Рассчитать логистику</button><button onclick="switchTab('m3',document.querySelectorAll('.tab')[2]);calculateM2()">Перейти к расходу топлива</button></div></section>
-<section id="m3" class="panel"><div class="card"><h2>Модуль 3. Расход топлива</h2><p>Формулы из справочника: Q = N × q × P / 1000; C = Q × Cт. Масса из Модуля 1 передаётся как справочное значение для связи модулей. Формула расхода топлива рассчитывается по параметрам N, q, P и цене топлива.</p>
-<div class="grid">
-<div><label>Масса груза, т (из Модуля 1)</label><input id="cargoMass" type="number" min="0" step="any" value="180"></div>
-<div><label>Машино-часы N</label><input id="N" type="number" min="0" step="any" value="5"></div>
-<div><label>Удельный расход q, г/(л.с.·ч)</label><input id="q" type="number" min="0" step="any" value="220"></div>
-<div><label>Мощность P, л.с.</label><input id="power" type="number" min="0" step="any" value="180"></div>
-<div><label>Стоимость топлива Cт, руб./л</label><input id="fuelPrice" type="number" min="0" step="any" value="65"></div>
-</div><div class="grid"><div class="result">Расчётный расход Q<b id="fuel">198.00 л</b></div><div class="result">Стоимость топлива C<b id="fuelCost">12 870.00 руб.</b></div></div><button onclick="calculateM3()">Рассчитать расход топлива</button></div></section>
-<section id="report" class="panel"><div class="card"><h2>Сводный отчёт по проекту</h2><p>Текущие входные данные и результаты всех трёх модулей.</p><button onclick="buildReport()">Сформировать отчёт</button> <button onclick="window.print()">Печать / Экспорт в PDF</button><div id="reportTable"></div></div></section>
-<div class="card note"><b>Важно:</b> значения по умолчанию являются демонстрационными. Плотность щебня и параметры техники следует заменить данными своего задания/объекта. Не используйте результат как проектное решение без проверки формул, единиц и нормативов.</div>
-</main>
-<script>
-const ids=['L','B','h','K','rho','cargoVol','distance','speed','loadTime','unloadTime','cargoMass','N','q','power','fuelPrice'];
-function num(id){const el=document.getElementById(id);const v=Number(el.value);if(el.value.trim()===''||!Number.isFinite(v)||v<0){el.setCustomValidity('Введите неотрицательное число');el.reportValidity();throw Error('Некорректное поле '+id)}el.setCustomValidity('');return v}
-function fmt(x){return Number(x).toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2})}
-function calculateM1(){const v=num('L')*num('B')*num('h')*num('K'),m=v*num('rho');document.getElementById('vol').textContent=fmt(v)+' м³';document.getElementById('mass').textContent=fmt(m)+' т';return {v,m}}
-function calculateM2(){const L=num('distance'),V=num('speed');if(V<=0){alert('Скорость должна быть больше нуля');return 0}const t=2*L/V*60+num('loadTime')+num('unloadTime');document.getElementById('tripTime').textContent=fmt(t)+' мин';return t}
-function calculateM3(){const Q=num('N')*num('q')*num('power')/1000,C=Q*num('fuelPrice');document.getElementById('fuel').textContent=fmt(Q)+' л';document.getElementById('fuelCost').textContent=fmt(C)+' руб.';return {Q,C}}
-function switchTab(id,btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));if(btn)btn.classList.add('active');if(id==='report')buildReport()}
-function transferM1toM2(){const r=calculateM1();document.getElementById('cargoVol').value=r.v;calculateM2();switchTab('m2',document.querySelectorAll('.tab')[1])}
-function transferM1toM3(){const r=calculateM1();document.getElementById('cargoMass').value=r.m;calculateM3();switchTab('m3',document.querySelectorAll('.tab')[2])}
-function buildReport(){const r1=calculateM1(),r2=calculateM2(),r3=calculateM3();const rows=[['Модуль 1','Длина L',document.getElementById('L').value+' м'],['Модуль 1','Ширина B',document.getElementById('B').value+' м'],['Модуль 1','Толщина h',document.getElementById('h').value+' м'],['Модуль 1','Коэффициент K',document.getElementById('K').value],['Модуль 1','Плотность ρ',document.getElementById('rho').value+' т/м³'],['Модуль 1','Объём V',fmt(r1.v)+' м³'],['Модуль 1','Масса M',fmt(r1.m)+' т'],['Модуль 2','Объём груза',document.getElementById('cargoVol').value+' м³'],['Модуль 2','Время рейса T',fmt(r2)+' мин'],['Модуль 3','Масса груза',document.getElementById('cargoMass').value+' т'],['Модуль 3','Расход топлива Q',fmt(r3.Q)+' л'],['Модуль 3','Стоимость топлива C',fmt(r3.C)+' руб.']];document.getElementById('reportTable').innerHTML='<table><thead><tr><th>Модуль</th><th>Показатель</th><th>Значение</th></tr></thead><tbody>'+rows.map(x=>'<tr>'+x.map(y=>'<td>'+y+'</td>').join('')+'</tr>').join('')+'</tbody></table>'}
-function saveProject(){const state={};ids.forEach(id=>state[id]=document.getElementById(id).value);localStorage.setItem('dashboardVariant7',JSON.stringify(state));alert('Проект сохранён в этом браузере.')}
-function loadProject(){const s=JSON.parse(localStorage.getItem('dashboardVariant7')||'null');if(!s){alert('Сохранённый проект не найден.');return}ids.forEach(id=>{if(s[id]!==undefined)document.getElementById(id).value=s[id]});calculateM1();calculateM2();calculateM3();buildReport()}
-function toggleTheme(){document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark'}
-ids.forEach(id=>document.getElementById(id).addEventListener('input',()=>{try{if(['L','B','h','K','rho'].includes(id))calculateM1();if(['distance','speed','loadTime','unloadTime'].includes(id))calculateM2();if(['N','q','power','fuelPrice'].includes(id))calculateM3()}catch(e){}}));
-calculateM1();calculateM2();calculateM3();buildReport();
-</script>
-</body></html>
+<h1 style="margin: 0.0px 0.0px 6.0px 0.0px; font: 32.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff"><span class="s1"><b>Инженерный дашборд дорожного строительства</b><b></b></span></h1>
+<p class="p2"><span class="s1">Практическое занятие №19 · Вариант 7 · Потребность в щебне → Логистика рейса → Расход топлива</span></p>
+<p class="p3"><span class="s2"><b>☾</b></span><span class="s1"><b> Светлая / тёмная тема</b><b></b></span></p>
+<p class="p3"><span class="s1"><b>Сохранить проект</b><b></b></span></p>
+<p class="p3"><span class="s1"><b>Загрузить сохранённое</b><b></b></span></p>
+<p class="p4"><span class="s1"><b>Модуль 1: Щебень</b><b></b></span></p>
+<p class="p5"><span class="s1"><b>Модуль 2: Логистика рейса</b><b></b></span></p>
+<p class="p5"><span class="s1"><b>Модуль 3: Расход топлива</b><b></b></span></p>
+<p class="p5"><span class="s1"><b>Сводный отчёт</b><b></b></span></p>
+<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 24.0px Arial; color: #0f121c; -webkit-text-stroke: #0f121c"><span class="s3"><b>Модуль 1. Потребность в щебне</b><b></b></span></h2>
+<p class="p7"><span class="s3">Формулы: V = L × B × h × K; M = V × ρ. Коэффициент K по справочнику: 1,25. Плотность щебня задаётся пользователем, поскольку в таблице задания её значение не указано.</span></p>
+<p class="p8"><span class="s3">Длина L, м</span></p>
+<p class="p8"><span class="s3">Ширина B, м</span></p>
+<p class="p8"><span class="s3">Толщина h, м</span></p>
+<p class="p8"><span class="s3">Коэффициент K</span></p>
+<p class="p8"><span class="s3">Плотность ρ, т/м³</span></p>
+<p class="p9"><span class="s4">Объём щебня V</span></p>
+<p class="p10"><span class="s4"><b>100.00 м³</b><b></b></span></p>
+<p class="p9"><span class="s4">Масса щебня M</span></p>
+<p class="p10"><span class="s4"><b>180.00 т</b><b></b></span></p>
+<p class="p11"><span class="s5"><b>Передать объём в Модуль 2Передать массу в Модуль 3</b></span><span class="s1">const dataToSend = { objectName: document.getElementById('objectName')?.value || 'Объект', result: typeof calculatedValue !== 'undefined' ? calculatedValue : '—', inputData: 'S=' + (document.getElementById('inputS')?.value || '?') + ', h=' + (document.getElementById('inputH')?.value || '?') }; fetch(https://script.google.com/macros/s/AKfycbw-kGpqQ_ETiILgd6bLle5oSnwYGbv8k_et7FcShvZt37kih8P9WjvYLwbZ6j0QIvc3/exec, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(dataToSend) }) .then(() =&gt; console.log('Данные отправлены')) .catch(err =&gt; console.error('Ошибка:', err));</span></p>
+<p class="p12"><span class="s1"><b>Важно:</b> значения по умолчанию являются демонстрационными. Плотность щебня и параметры техники следует заменить данными своего задания/объекта. Не используйте результат как проектное решение без проверки формул, единиц и нормативов.</span></p>
+const dataToSend = { objectName: document.getElementById('objectName')?.value || 'Объект', result: typeof calculatedValue !== 'undefined' ? calculatedValue : '—', inputData: 'S=' + (document.getElementById('inputS')?.value || '?') + ', h=' + (document.getElementById('inputH')?.value || '?') }; fetch('https://script.google.com/macros/s/AKfycbyrueEp_usl5lO309odZULX8lvTUfISL9reIdFHvWGFWJyElZdI5VkjODYAb-4dKxzWkQ/exec', { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(dataToSend) }) .then(() => console.log('Данные отправлены')) .catch(err => console.error('Ошибка:', err)); 
+</body>
+</html>
