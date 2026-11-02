@@ -2,78 +2,120 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.7">
+  <title>Инженерный дашборд</title>
   <style type="text/css">
-    body {background-color: #eaeef5}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #134087}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #ff0000}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #0d2b57}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #134087}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #0f212c; -webkit-text-stroke: #0f212c}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #414065; -webkit-text-stroke: #414065}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; color: #0f212c; -webkit-text-stroke: #0f212c}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 25.0px Arial; color: #134087; -webkit-text-stroke: #134087}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0f212c; -webkit-text-stroke: #0f212c}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #414065; -webkit-text-stroke: #414065; background-color: #ffffff}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 11.0px Menlo; font-kerning: none}
-    span.s3 {font-kerning: none; background-color: #ffffff}
-    span.s4 {font-kerning: none; background-color: #eaeef5}
-    span.s5 {font: 11.0px 'Helvetica Neue'; font-kerning: none; color: #ffffff; background-color: #134087; -webkit-text-stroke: 0px #ffffff}
+    body {background-color: #eaeef5; font-family: Arial, sans-serif; padding: 20px;}
+    .header {background-color: #134087; color: white; padding: 15px; border-radius: 8px; margin-bottom: 20px;}
+    .module-box {background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px;}
+    h2 {color: #134087;}
+    label {display: block; margin-bottom: 15px; font-weight: bold; color: #414065;}
+    input, select, textarea {width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 14px;}
+    button {background: #134087; color: white; padding: 12px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold;}
+    button:hover {background: #0d2b57;}
+    .message {margin-top: 15px; font-weight: bold;}
   </style>
 </head>
 <body>
-<h1 style="margin: 0.0px 0.0px 6.0px 0.0px; font: 32.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff"><span class="s1"><b>Инженерный дашборд дорожного строительства</b></span></h1>
-<p class="p2"><span class="s1">Практическое занятие №19 - Вариант 7 - Потребность в щебне - Логистика рейса - Расход топлива</span></p>
-<p class="p3"><span class="s2"><b>&lt; Светлая / Тёмная тема</b></span><span class="s1"><b><br></b></span></p>
-<p class="p4"><span class="s1"><b>Сохранить проект</b></span><span class="s2"><b><br></b></span></p>
-<p class="p4"><span class="s1"><b>Загрузить сохранённое</b></span><span class="s2"><b><br></b></span></p>
-<p class="p4"><span class="s1"><b>Модуль 1: Щебень</b></span><span class="s2"><b><br></b></span></p>
-<p class="p4"><span class="s1"><b>Модуль 2: Логистика рейса</b></span><span class="s2"><b><br></b></span></p>
-<p class="p5"><span class="s1"><b>Модуль 3: Расход топлива</b></span><span class="s2"><b><br></b></span></p>
-<p class="p5"><span class="s1"><b>Сводный отчёт</b></span><span class="s2"><b><br></b></span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 24.0px Arial; color: #0f212c; -webkit-text-stroke: #0f212c"><span class="s3"><b>Модуль 1. Потребность в щебне</b></span></h2>
-<p class="p6"><span class="s3">Формулы: V = L × B × h × K; M = V × ρ. Коэффициент K по справочнику: 1,25. Плотность щебня задаётся пользователем, поскольку в таблице задания её значение не указано.</span></p>
-<p class="p8"><span class="s3">Длина L, м</span></p>
-<p class="p8"><span class="s3">Ширина B, м</span></p>
-<p class="p8"><span class="s3">Толщина h, м</span></p>
-<p class="p8"><span class="s3">Коэффициент K</span></p>
-<p class="p8"><span class="s3">Плотность ρ, т/м³</span></p>
-<p class="p8"><span class="s3">Объём щебня V</span></p>
-<p class="p10"><span class="s4"><b>100.00 м³</b></span></p>
-<p class="p8"><span class="s3">Масса щебня M</span></p>
-<p class="p10"><span class="s4"><b>180.00 т</b></span></p>
 
-<!-- Кнопки, при нажатии на которые сработает скрипт -->
-<p class="p11">
-  <span class="s5" onclick="sendDataToDashboard()" style="cursor: pointer;">Передать объём в Модуль 2</span>
-  <span class="s5" onclick="sendDataToDashboard()" style="cursor: pointer;">Передать массу в Модуль 3</span>
-</p>
+<div class="header">
+  <h1 style="margin: 0;">Инженерный дашборд дорожного строительства</h1>
+  <p style="margin: 5px 0 0 0;">Практическое занятие №25 - Вариант 7</p>
+</div>
 
-<p class="p1"><span class="s1">Важно: значения по умолчанию являются демонстрационными. Плотность щебня и параметры техники следует заменить данными своего задания/объекта. Не используйте результат как проектное решение без проверки формул, единиц и нормативов.</span></p>
+<div class="module-box">
+  <h2>Модуль 1. Потребность в щебне (из ПЗ 24)</h2>
+  <p>Формулы: V = L × B × h × K; M = V × ρ. Коэффициент K = 1,25.</p>
+  <p class="p10"><span class="s4"><b>100.00 м³</b></span></p>
+  <p class="p10"><span class="s4"><b>180.00 т</b></span></p>
+  <p>
+    <span onclick="sendDataToDashboard()" style="background:#134087; color:white; padding:5px 10px; border-radius:4px; cursor:pointer;">Передать объём в Модуль 2</span>
+  </p>
+</div>
 
+<!-- НОВЫЙ МОДУЛЬ 4 -->
+<section id="module4" style="margin-top:40px; padding:25px; background:#f8fbfe; border-radius:12px; border:1px solid #d7e1eb;">
+  <h2>Модуль 4: Учёт кирпичной кладки</h2>
+  <form id="module4Form">
+    
+    <!-- ПОЛЯ ФОРМЫ -->
+    <label>Дата <input type="date" name="Дата" required></label>
+    <label>Участок <input type="text" name="Участок" required></label>
+    <label>Объём, м³ <input type="number" name="Объём, м³" min="0.01" step="0.01" required></label>
+    <label>Бригада <input type="text" name="Бригада" required></label>
+    
+    <button type="submit">Сохранить в таблицу</button>
+    <p id="module4Message" style="margin-top:10px; font-weight:700;"></p>
+  </form>
+</section>
+
+<!-- СКРИПТЫ -->
 <script>
+  // --- СКРИПТ ИЗ ПЗ 24 ---
   function sendDataToDashboard() {
-    // Исправлена опечатка getElementById
     const dataToSend = {
       objectName: document.getElementById('objectName')?.value || 'Объект',
       result: typeof calculatedValue !== 'undefined' ? calculatedValue : '—',
       inputData: 'S=' + (document.getElementById('inputS')?.value || '?') + ', h=' + (document.getElementById('inputH')?.value || '?')
     };
 
+    // Убедитесь, что здесь ВАША ссылка из ПЗ 24!
     fetch('https://script.google.com/macros/s/AKfycbyrueEp_usl5lO309odZULX8lvTUfISL9reIdFHvWGFWJyElZdI5VkjODYAb-4dKxzWkQ/exec', {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(dataToSend)
     })
-    .then(() => console.log('Данные отправлены'))
-    .catch(err => console.error('Ошибка:', err));
+    .then(() => console.log('Данные из ПЗ 24 отправлены'))
+    .catch(err => console.error('Ошибка ПЗ 24:', err));
   }
+
+  // --- СКРИПТ ДЛЯ МОДУЛЯ 4 (ПЗ 25) ---
+  const MODULE_NAME = 'Вариант 7. Учёт кирпичной кладки';
+  
+  // Вставьте сюда ту же самую ссылку /exec, что и выше!
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrueEp_usl5lO309odZULX8lvTUfISL9reIdFHvWGFWJyElZdI5VkjODYAb-4dKxzWkQ/exec';
+
+  document.getElementById('module4Form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const form = this;
+    const msg = document.getElementById('module4Message');
+    const btn = form.querySelector('button[type="submit"]');
+    
+    const fields = {};
+    new FormData(form).forEach((value, key) => {
+      fields[key] = String(value).trim();
+    });
+
+    for (const [name, value] of Object.entries(fields)) {
+      if (!value) {
+        msg.textContent = 'Заполните поле: ' + name;
+        msg.style.color = '#a83a35';
+        return;
+      }
+    }
+
+    const dataToSend = { module: MODULE_NAME, fields: fields };
+    btn.disabled = true;
+    msg.textContent = 'Отправка...';
+    msg.style.color = '#2468a0';
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(dataToSend)
+      });
+      msg.textContent = 'Запрос отправлен. Проверьте таблицу.';
+      msg.style.color = '#267747';
+      form.reset(); // Очищаем форму после успешной отправки
+    } catch (err) {
+      msg.textContent = 'Ошибка: ' + err.message;
+      msg.style.color = '#a83a35';
+    } finally {
+      btn.disabled = false;
+    }
+  });
 </script>
 
 </body>
